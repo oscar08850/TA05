@@ -15,6 +15,7 @@ public class Ejercicio10 {
 			factura = total + factura;
 			ventas--;
 		}
+		scanner.close();
 		
 		System.out.println("Las ventas ascienden a: " + factura);
 		

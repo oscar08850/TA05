@@ -7,6 +7,7 @@ public class Ejercicio5 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Introduce un número: ");
 		int numero = Integer.parseInt(scanner.nextLine());
+		scanner.close();
 		
 		if (numero%2 == 0)
 			System.out.println("El numero es par");

@@ -11,6 +11,7 @@ public class Ejercicio6 {
 		
 		System.out.print("Introduce el precio: ");
 		double precioFinal = Double.parseDouble(scanner.nextLine());
+		scanner.close();
 
 		System.out.println("El precio final es: " + (precioFinal+(precioFinal*IVA)));
 		

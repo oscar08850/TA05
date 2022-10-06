@@ -3,16 +3,18 @@ import javax.swing.JOptionPane;
 public class Ejercicio12 {
 
 	public static void main(String[] args) {
-		
+
 		String contraseña = "a";
 		String intentoContra = JOptionPane.showInputDialog("Introduce contraseña");
 		int intento = 2;
-		
-		
-		while(contraseña != intentoContra && intento > 0) {
-			
-			if (contraseña == intentoContra)
-				JOptionPane.showMessageDialog(null, "Bienvenido: ");
+		boolean seguir = true;
+
+		while (!contraseña.equals(intentoContra) & intento > 0 & seguir) {
+			// while(contraseña != intentoContra && intento > 0) {
+
+			if (contraseña.equals(intentoContra)) {
+				seguir = false;
+			}
 			else {
 				intentoContra = JOptionPane.showInputDialog("Contraseña incorrecta, vuelve a intentarlo: ");
 				intento--;
@@ -21,13 +23,13 @@ public class Ejercicio12 {
 			System.out.println("La contraseña es: " + contraseña);
 
 		}
-		if (intentoContra == contraseña)
+		if (contraseña.equals(intentoContra))
 			JOptionPane.showMessageDialog(null, "Contraseña correcta!!!");
 
 		else if (intento == 0) {
 			JOptionPane.showMessageDialog(null, "Demasiados intentos");
-		 
+
 		}
-		
+
 	}
 }
